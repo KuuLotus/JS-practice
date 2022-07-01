@@ -32,17 +32,24 @@
       <!-- /.container -->
     </footer>
     <script>
-      "use strict"
+      "use strict";
 
-      const number = Math.floor(Math.randam() * 6);
-      const answer = paraseInt(window.prompt("数当てゲーム。0~5の数字を入力してね。"));
-      let message;
-      if(answer === number) {
-        message = "あたり！";
-      } else if (answer < number) {
-        message = "残念でした！もっと大きい";
-      } else if (answer > number) {
-        message = "残念でした！もっと小さい";
+      function fizzbuzz(num) {
+        if (num % 3 === 0 && num % 5 === 0) {
+          return "fizzbuzz";
+        } else if (num % 3 === 0) {
+          return "fizz";
+        } else if (num % 5 === 0) {
+          return "buzz";
+        } else {
+          return num;
+        }
+      }
+
+      let i = 1;
+      while (i <= 30) {
+        console.log(fizzbuzz(i));
+        i += 1;
       }
     </script>
   </body>
