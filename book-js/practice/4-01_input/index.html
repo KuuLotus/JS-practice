@@ -41,7 +41,7 @@
       "use strict";
 
       document.getElementById("form").onsubmit = function (event) {
-        event.preventDefault();
+        event.preventDefault(); //初期の動きをなくす
         const search = document.getElementById("form").word.value;
         document.getElementById(
           "output"
